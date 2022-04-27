@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  background-color: #153499;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+svg {
+  width: 1.2rem;
+  height: 1.5rem;
+}
+
+.search-wrapper {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 0;
+  transition: all .5s;
+  display: flex;
+  position: relative;
+}
+
+.search-results {
+  height: 0%;
+  z-index: 2;
+  transition: all .5s ease-in;
+  overflow-y: scroll;
+}
+
+.search-results::-webkit-scrollbar {
+  background-color: #00000013;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #00000070;
+  border-radius: .2rem;
+}
+
+.hero-bg {
+  height: 100%;
+  width: 20rem;
+  transition: all 1.5s;
+  animation-timing-function: linear;
+}
+
+.hero-bg-reverse {
+  height: 22rem;
+  width: 20rem;
+  transition: all 1.5s;
+  animation-timing-function: linear;
+}
+
+.hero-bg img, .hero-bg-reverse img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  opacity: .5;
+  border-radius: 2rem;
+  margin: 0 0 1.5rem;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  background-color: #225d9159;
+  position: absolute;
+}
+
+.hero-background {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  transition: all 1.5s;
+  position: absolute;
+  overflow: hidden;
+}
+
+.search {
+  color: #f0f8ff8e;
+  background-color: #f0f8ff3a;
+  border: none;
+  border-radius: .2rem 0 0 .2rem;
+  padding: .5rem;
+}
+
+.submit {
+  min-height: 2rem;
+  min-width: 2rem;
+  cursor: pointer;
+  background-color: #f0f8ffaf;
+  border: none;
+  border-radius: 0 .2rem .2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit:hover {
+  background-color: #f0f8ff;
+  transition: all .5s;
+}
+
+.search:focus {
+  color: #f0f8ff8e;
+  background-color: #c5e4ff62;
+  outline: none;
+}
+
+.search::placeholder {
+  color: #f0f8ff8e;
+}
+
+.submit i {
+  opacity: .8;
+}
+
+.hero-info {
+  height: auto;
+  width: 40rem;
+  z-index: 2;
+  background-color: #f0f8ff3a;
+  border-radius: .2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  transition: all .5s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-info .hero-pic {
+  height: 15rem;
+  width: 16rem;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.hero-info img {
+  object-fit: cover;
+  height: 15rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-info > p {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  white-space: nowrap;
+  color: #35424d09;
+  -webkit-text-stroke-width: .12rem;
+  -webkit-text-stroke-color: #061d3117;
+  z-index: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 5rem;
+  font-weight: bolder;
+  position: absolute;
+  bottom: -2rem;
+  right: -10rem;
+}
+
+.hero-details {
+  width: 100%;
+  margin-left: 2rem;
+  font-family: Poppins, sans-serif;
+}
+
+.hero-details p {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #f0f8ff88;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.personal {
+  margin-bottom: 2rem;
+}
+
+.personal p {
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: .1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline;
+}
+
+.personal p:last-child {
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+.bar {
+  height: 1rem;
+  width: 0%;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  transition: all 1s ease-in-out;
+  overflow-x: hidden;
+}
+
+#power {
+  text-align: center;
+  background-color: #b67fff81;
+}
+
+#intelligence {
+  text-align: center;
+  background-color: #3dffbe96;
+}
+
+#durability {
+  text-align: center;
+  background-color: #dab43996;
+}
+
+#strength {
+  text-align: center;
+  background-color: #07081396;
+}
+
+#combat {
+  text-align: center;
+  background-color: #171b4e96;
+}
+
+#speed {
+  text-align: center;
+  background-color: #3dfff596;
+}
+
+.bar div {
+  height: 1rem;
+  width: 3.3rem;
+  float: right;
+  background-color: #f0f8ff;
+  border-radius: 5rem;
+  font-size: .7rem;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#successAnimationCircle {
+  stroke-dasharray: 200 200;
+  stroke: #1680a0;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: 36 36;
+  stroke: #fff;
+}
+
+#successAnimationResult {
+  fill: #16a085;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  animation: scaleAnimation 1s ease-out both;
+}
+
+#successAnimation.animated #successAnimationCircle {
+  animation: drawCircle 1s cubic-bezier(.77, 0, .175, 1) both, fadeOut .3s linear .9s both;
+}
+
+#successAnimation.animated #successAnimationCheck {
+  animation: drawCheck 1s cubic-bezier(.77, 0, .175, 1) both, fadeOut .3s linear .9s both;
+}
+
+#successAnimation.animated #successAnimationResult {
+  animation: fadeIn .3s linear .9s both;
+}
+
+.err-msg {
+  color: #d9e9f7;
+  -webkit-text-stroke-width: 0;
+  font-family: Poppins;
+  font-size: 1rem;
+}
+
+.alignment {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: .5rem solid;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  left: 10rem;
+  transform: rotate(-20deg);
+}
+
+.bad {
+  color: #f005;
+  border-color: #f005;
+}
+
+.good {
+  color: #00ff8860;
+  border-color: #00ff8869;
+}
+
+.neutral {
+  color: #ffc40069;
+  border-color: #ffc40069;
+}
+
+.alignment p {
+  text-transform: capitalize;
+  font-family: Poppins;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=index.c92073ef.css.map */
