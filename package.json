@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@types/node": "^17.0.29",
-    "node-fetch": "^3.2.3"
+    "node-fetch": "^2.6.1"
   }
 }

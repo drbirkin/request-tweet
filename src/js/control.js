@@ -1,8 +1,8 @@
 import * as model from './model.js';
 
 const backgroundImagesControl = async function () {
-    const allHeros = await model.getAllHeros();
-
+    // const allHeros = await model.getAllHeros();
+    await model.getAllHeros();
     // let index = 0;
     // allHeros.forEach((img) => {
     //     if(index > 6) index = 0;
@@ -11,7 +11,7 @@ const backgroundImagesControl = async function () {
     //     BackgroundView._addBgPicSet(img, index);
     //     index++;
     // })
-    console.log(allHeros);
+    // console.log(allHeros);
 }
 
 const init = async function () {
